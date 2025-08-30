@@ -8,34 +8,45 @@
         /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #121212;
+            color: #e0e0e0;
             margin: 0;
             padding: 0;
-            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        h1, h2, h3 {
+            color: #ff5722;
         }
 
         h1 {
-            color: #ff5722;
             text-align: center;
             margin-top: 40px;
+            font-size: 48px;
+            animation: fadeIn 2s ease-in-out;
         }
 
         h2 {
-            color: #4CAF50;
-            font-size: 24px;
+            color: #ff9800;
+            font-size: 28px;
             margin-top: 20px;
+        }
+
+        h3 {
+            color: #4CAF50;
         }
 
         /* Container Styling */
         .container {
             width: 80%;
             margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            padding: 30px;
+            background-color: #1c1c1c;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
             margin-top: 40px;
             margin-bottom: 40px;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .content {
@@ -63,19 +74,21 @@
             color: white;
             font-size: 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .button:hover {
             background-color: #e64a19;
             transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .button:active {
             background-color: #d84315;
-            transform: scale(0.95);
+            transform: scale(0.98);
         }
 
         /* Code Block Styles */
@@ -85,6 +98,7 @@
             padding: 20px;
             margin-top: 40px;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         pre {
@@ -94,16 +108,7 @@
             font-family: 'Courier New', Courier, monospace;
             white-space: pre-wrap;
             word-wrap: break-word;
-        }
-
-        /* Animation Effects */
-        .fadeIn {
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            font-size: 16px;
         }
 
         /* Feature Box Styles */
@@ -115,12 +120,18 @@
         }
 
         .feature {
-            background-color: #f5f5f5;
-            padding: 20px;
+            background-color: #2a2a2a;
+            padding: 25px;
             margin: 10px;
             width: 30%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .feature h3 {
@@ -129,30 +140,61 @@
         }
 
         .feature p {
-            color: #555;
-            line-height: 1.6;
+            color: #bbb;
         }
 
-        /* Small Screens - Mobile */
+        /* Responsive Design */
         @media (max-width: 768px) {
             .feature {
                 width: 100%;
                 margin-bottom: 20px;
             }
         }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #e64a19;
+        }
+
+        .dark-mode-toggle:active {
+            background-color: #d84315;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="dark-mode-toggle" id="darkModeToggle">Toggle Dark Mode</button>
 
     <!-- Title -->
     <h1>Welcome to SteamTools</h1>
 
     <!-- Main Container -->
-    <div class="container fadeIn">
+    <div class="container">
         <div class="content">
             <h2>What is SteamTools?</h2>
             <p>SteamTools is a powerful suite of utilities designed to improve your Steam experience. Whether you're a casual gamer, modder, or streamer, SteamTools has something for everyone. The tools are designed to help you enhance your Steam library, manage your account, and even optimize your gaming experience.</p>
-            
+
             <h2>Features of SteamTools</h2>
             <p>SteamTools offers a variety of features that will make your Steam experience more streamlined and efficient. Here are some of the core tools:</p>
 
@@ -178,7 +220,7 @@
 
             <h2>How It Works</h2>
             <p>Using SteamTools is simple! Just download the application, install it, and start using the tools to manage your Steam library, improve performance, or customize your Steam interface.</p>
-            
+
             <ul>
                 <li>Step 1: Download SteamTools</li>
                 <li>Step 2: Install the app on your computer</li>
@@ -209,7 +251,7 @@ const installSteamTools = () => {
     color: white;
     font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -222,6 +264,15 @@ const installSteamTools = () => {
         document.getElementById('downloadBtn').addEventListener('click', function() {
             // Redirect to SteamTools download page
             window.location.href = 'https://www.steamtools.net/';
+        });
+
+        // Dark Mode Toggle Script
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+            const isDarkMode = document.body.classList.contains('dark');
+            document.body.style.backgroundColor = isDarkMode ? '#121212' : '#f5f5f5';
+            document.body.style.color = isDarkMode ? '#e0e0e0' : '#333';
         });
     </script>
 
