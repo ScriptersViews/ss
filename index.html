@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteamTools</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            color: #ff5722;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Button Styling */
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            background-color: #ff5722;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            background-color: #d84315;
+            transform: scale(0.95);
+        }
+
+        /* Code Block Styles */
+        .code-container {
+            background-color: #2e2e2e;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        pre {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Animation Effects */
+        .fadeIn {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1>Welcome to SteamTools</h1>
+
+    <!-- Main Container -->
+    <div class="container fadeIn">
+        <div class="content">
+            <h2>What is SteamTools?</h2>
+            <p>SteamTools is a set of utilities designed to enhance the Steam experience. Whether you're a gamer, streamer, or modder, SteamTools has something for you.</p>
+            <p>Our tools help with Steam account management, customization, game optimization, and much more!</p>
+        </div>
+
+        <!-- Download Button -->
+        <div class="button-container">
+            <button class="button" id="downloadBtn">Download SteamTools</button>
+        </div>
+
+        <!-- Code Snippets Example -->
+        <div class="code-container">
+            <h2>Example JavaScript Code</h2>
+            <pre>
+const installSteamTools = () => {
+    console.log("Downloading SteamTools...");
+    window.location.href = 'https://tlauncher.org/';
+};
+            </pre>
+
+            <h2>Example CSS Code</h2>
+            <pre>
+.button {
+    padding: 15px 30px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+            </pre>
+        </div>
+    </div>
+
+    <!-- JavaScript for Button Action -->
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Redirect to download page
+            window.location.href = 'https://tlauncher.org/';
+        });
+    </script>
+
+</body>
+</html>
