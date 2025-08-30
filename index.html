@@ -91,26 +91,6 @@
             transform: scale(0.98);
         }
 
-        /* Code Block Styles */
-        .code-container {
-            background-color: #2e2e2e;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        pre {
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: 'Courier New', Courier, monospace;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-size: 16px;
-        }
-
         /* Feature Box Styles */
         .features-box {
             display: flex;
@@ -179,6 +159,19 @@
         .dark-mode-toggle:active {
             background-color: #d84315;
         }
+
+        /* Section Titles */
+        .section-title {
+            color: #ff9800;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            color: #bbb;
+        }
     </style>
 </head>
 <body>
@@ -192,70 +185,81 @@
     <!-- Main Container -->
     <div class="container">
         <div class="content">
-            <h2>What is SteamTools?</h2>
-            <p>SteamTools is a powerful suite of utilities designed to improve your Steam experience. Whether you're a casual gamer, modder, or streamer, SteamTools has something for everyone. The tools are designed to help you enhance your Steam library, manage your account, and even optimize your gaming experience.</p>
+            <!-- What is SteamTools? -->
+            <h2 class="section-title">What is SteamTools?</h2>
+            <p>SteamTools is an all-in-one utility suite designed to help you optimize, customize, and enhance your Steam experience. Whether you're a casual gamer, a modder, or a professional streamer, SteamTools provides powerful features that improve your Steam library, manage your Steam account, and optimize your gaming setup.</p>
 
-            <h2>Features of SteamTools</h2>
-            <p>SteamTools offers a variety of features that will make your Steam experience more streamlined and efficient. Here are some of the core tools:</p>
+            <!-- Features -->
+            <h2 class="section-title">Features of SteamTools</h2>
+            <p>SteamTools comes packed with a variety of tools that are specifically designed to streamline and enhance your Steam experience. Here are some of the main features:</p>
 
             <div class="features-box">
                 <!-- Feature 1 -->
                 <div class="feature">
                     <h3>Account Management</h3>
-                    <p>Easily manage your Steam account by checking your friends list, chat history, and more! SteamTools provides advanced features like auto-login and automatic Steam client updates.</p>
+                    <p>Easily manage your Steam account with features like auto-login, profile customization, and monitoring of your friends list and activity. Keep track of your achievements and rewards from the same interface.</p>
                 </div>
 
                 <!-- Feature 2 -->
                 <div class="feature">
                     <h3>Game Optimization</h3>
-                    <p>Optimize your Steam games for maximum performance. SteamTools provides a set of utilities that help tweak game settings, fix lag, and improve your overall gaming experience.</p>
+                    <p>Maximize the performance of your games with built-in optimization tools. Tweak settings, manage game files, and boost performance for smoother gaming sessions.</p>
                 </div>
 
                 <!-- Feature 3 -->
                 <div class="feature">
-                    <h3>Customizable UI</h3>
-                    <p>SteamTools lets you customize your Steam client with a variety of skins, themes, and layout options. Make your Steam client match your personal style and preferences.</p>
+                    <h3>Customizable User Interface</h3>
+                    <p>Transform the appearance of your Steam client with a wide range of themes, skins, and customizable layouts. Tailor the look and feel to match your unique style.</p>
                 </div>
             </div>
 
-            <h2>How It Works</h2>
-            <p>Using SteamTools is simple! Just download the application, install it, and start using the tools to manage your Steam library, improve performance, or customize your Steam interface.</p>
+            <!-- How SteamTools Improves Your Experience -->
+            <h2 class="section-title">How SteamTools Improves Your Experience</h2>
+            <p>SteamTools isn’t just a collection of features; it’s a complete solution designed to optimize your entire Steam experience. From managing your game library to enhancing the performance of your system, SteamTools covers it all:</p>
+            <ul>
+                <li>Speed up Steam startup times.</li>
+                <li>Automatically update and patch your games.</li>
+                <li>Boost your Steam client’s performance with detailed configuration options.</li>
+                <li>Save time with auto-logins and shortcut keys.</li>
+            </ul>
+
+            <!-- How It Works -->
+            <h2 class="section-title">How It Works</h2>
+            <p>Getting started with SteamTools is easy and straightforward. The installation process is simple and requires just a few steps. After installation, launch the application, sign in with your Steam account, and you're ready to begin customizing your gaming experience!</p>
 
             <ul>
-                <li>Step 1: Download SteamTools</li>
-                <li>Step 2: Install the app on your computer</li>
-                <li>Step 3: Launch the app and start customizing your Steam experience</li>
+                <li>Step 1: Download and install SteamTools.</li>
+                <li>Step 2: Log in with your Steam credentials.</li>
+                <li>Step 3: Access the tools and start optimizing your setup.</li>
             </ul>
-        </div>
 
-        <!-- Download Button -->
-        <div class="button-container">
-            <button class="button" id="downloadBtn">Download SteamTools</button>
-        </div>
+            <!-- User Testimonials -->
+            <h2 class="section-title">What Users Are Saying</h2>
+            <p>"SteamTools has completely transformed how I manage my games. The optimization tools help me run every game at its best performance!" – Alex T.</p>
+            <p>"I love how customizable SteamTools is. I can finally change the look of my Steam client to match my aesthetic!" – Sarah L.</p>
 
-        <!-- Code Snippets Example -->
-        <div class="code-container">
-            <h2>Example JavaScript Code</h2>
-            <pre>
-const installSteamTools = () => {
-    console.log("Downloading SteamTools...");
-    window.location.href = 'https://www.steamtools.net/';
-};
-            </pre>
+            <!-- Frequently Asked Questions -->
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="content">
+                <h3>1. Is SteamTools free to use?</h3>
+                <p>Yes! SteamTools offers both free and premium features. The free version provides access to basic functionalities, while the premium version unlocks advanced tools and features.</p>
 
-            <h2>Example CSS Code</h2>
-            <pre>
-.button {
-    padding: 15px 30px;
-    background-color: #ff5722;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-            </pre>
+                <h3>2. Can I use SteamTools with my existing Steam library?</h3>
+                <p>Absolutely! SteamTools works seamlessly with your existing Steam library. It doesn't require any modifications to your games or account.</p>
+
+                <h3>3. Is SteamTools safe to use?</h3>
+                <p>Yes, SteamTools is completely safe to use. The application is built with security in mind, and we take all necessary precautions to protect your personal data.</p>
+            </div>
+
+            <!-- Download Button -->
+            <div class="button-container">
+                <button class="button" id="downloadBtn">Download SteamTools</button>
+            </div>
+
+            <!-- Contact & Support Section -->
+            <h2 class="section-title">Need Help?</h2>
+            <p>If you have any questions or need assistance with SteamTools, feel free to reach out to our support team. We're here to help you optimize and enhance your Steam experience.</p>
+            <p>Email us at: <strong>support@steamtools.net</strong></p>
         </div>
     </div>
 
