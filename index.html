@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SteamTools</title>
+    <title>SteamTools - Enhance Your Steam Experience</title>
     <style>
         /* Global Styles */
         body {
@@ -23,6 +23,7 @@
         h2 {
             color: #4CAF50;
             font-size: 24px;
+            margin-top: 20px;
         }
 
         /* Container Styling */
@@ -40,6 +41,14 @@
         .content {
             font-size: 18px;
             line-height: 1.6;
+        }
+
+        .content ul {
+            margin-left: 20px;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
         }
 
         /* Button Styling */
@@ -96,6 +105,41 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        /* Feature Box Styles */
+        .features-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .feature {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Small Screens - Mobile */
+        @media (max-width: 768px) {
+            .feature {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,8 +151,39 @@
     <div class="container fadeIn">
         <div class="content">
             <h2>What is SteamTools?</h2>
-            <p>SteamTools is a set of utilities designed to enhance the Steam experience. Whether you're a gamer, streamer, or modder, SteamTools has something for you.</p>
-            <p>Our tools help with Steam account management, customization, game optimization, and much more!</p>
+            <p>SteamTools is a powerful suite of utilities designed to improve your Steam experience. Whether you're a casual gamer, modder, or streamer, SteamTools has something for everyone. The tools are designed to help you enhance your Steam library, manage your account, and even optimize your gaming experience.</p>
+            
+            <h2>Features of SteamTools</h2>
+            <p>SteamTools offers a variety of features that will make your Steam experience more streamlined and efficient. Here are some of the core tools:</p>
+
+            <div class="features-box">
+                <!-- Feature 1 -->
+                <div class="feature">
+                    <h3>Account Management</h3>
+                    <p>Easily manage your Steam account by checking your friends list, chat history, and more! SteamTools provides advanced features like auto-login and automatic Steam client updates.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature">
+                    <h3>Game Optimization</h3>
+                    <p>Optimize your Steam games for maximum performance. SteamTools provides a set of utilities that help tweak game settings, fix lag, and improve your overall gaming experience.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature">
+                    <h3>Customizable UI</h3>
+                    <p>SteamTools lets you customize your Steam client with a variety of skins, themes, and layout options. Make your Steam client match your personal style and preferences.</p>
+                </div>
+            </div>
+
+            <h2>How It Works</h2>
+            <p>Using SteamTools is simple! Just download the application, install it, and start using the tools to manage your Steam library, improve performance, or customize your Steam interface.</p>
+            
+            <ul>
+                <li>Step 1: Download SteamTools</li>
+                <li>Step 2: Install the app on your computer</li>
+                <li>Step 3: Launch the app and start customizing your Steam experience</li>
+            </ul>
         </div>
 
         <!-- Download Button -->
@@ -145,7 +220,7 @@ const installSteamTools = () => {
     <!-- JavaScript for Button Action -->
     <script>
         document.getElementById('downloadBtn').addEventListener('click', function() {
-            // Redirect to download page
+            // Redirect to SteamTools download page
             window.location.href = 'https://www.steamtools.net/';
         });
     </script>
