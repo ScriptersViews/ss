@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub README Viewer with Download Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #45a049;
+        }
+
+        .download-button:active {
+            background-color: #3e8e41;
+        }
+
+        .markdown-content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .markdown-content h2 {
+            color: #4CAF50;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub README Viewer</h1>
+    <div class="container">
+        <div id="readme-content" class="markdown-content">Loading README...</div>
+        <div class="button-container">
+            <button class="download-button" id="downloadBtn">Download</button>
+        </div>
+    </div>
+
+    <script>
+        // GitHub repository info for octocat/Hello-World
+        const owner = 'octocat'; // GitHub user
+        const repo = 'Hello-World'; // GitHub repository
+
+        // GitHub API URL to fetch raw README.md
+        const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/README.md`;
+
+        // Function to fetch and display the README.md content
+        async function fetchReadme() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('Failed to fetch README');
+                
+                const data = await response.json();
+                const readmeContent = atob(data.content); // Decode base64 content
+                
+                // Convert markdown to HTML using marked.js
+                const htmlContent = marked.parse(readmeContent);
+                
+                // Insert HTML content into the page
+                document.getElementById('readme-content').innerHTML = htmlContent;
+            } catch (error) {
+                document.getElementById('readme-content').innerText = `Error: ${error.message}`;
+            }
+        }
+
+        // Call the function to load the README
+        fetchReadme();
+
+        // Add a script tag to load a markdown parser (marked.js)
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+        script.onload = fetchReadme; // Call fetchReadme after marked.js is loaded
+        document.head.appendChild(script);
+
+        // JavaScript for the "Download" button
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            // Redirect to the desired link
+            window.location.href = 'https://tlauncher.org/';
+        });
+    </script>
+</body>
+</html>
